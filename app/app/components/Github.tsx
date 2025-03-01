@@ -44,13 +44,13 @@ const GithubRepoLanguagesToColor: {[key: string]: string} = {
 
 
 async function getGithubData(): Promise<GithubData> {
-    const res = await fetch('https://api.github.com/users/NicholasHellmers')
+    const res = await fetch('https://api.github.com/users/Matthieu251299')
     const data: GithubData = await res.json()
     return data
 }
 
 async function getGithubRepos(): Promise<GithubRepo[]> {
-    const res = await fetch('https://api.github.com/users/NicholasHellmers/repos')
+    const res = await fetch('https://api.github.com/users/Matthieu251299/repos')
     const data: GithubRepo[] = await res.json()
     return data
 }
@@ -66,7 +66,7 @@ export default async function Github() {
 
             <div className="grid col-span-1 justify-center">
                 <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
-                    <a href="https://github.com/NicholasHellmers" target="_blank"><p>User: {githubData.login}</p></a>
+                    <a href="https://github.com/Matthieu251299" target="_blank"><p>User: {githubData.login}</p></a>
                     <p>Public Repos: {githubData.public_repos}</p>
                 </div>
                 <ol className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 py-5">
@@ -88,7 +88,7 @@ export default async function Github() {
 
             <div className="text-center">
 
-                <a href="https://github.com/NicholasHellmers?tab=repositories" target="_blank">Click Here to see more</a>
+                <a href="https://github.com/Matthieu251299?tab=repositories" target="_blank">Click Here to see more</a>
 
             </div>
 
